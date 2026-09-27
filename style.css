@@ -114,19 +114,22 @@ main > section:first-child a:hover {
    ========================= */
 
 main > section:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     text-align: center;
 }
 
+main > section:nth-child(2) > h2 {
+    grid-column: 1 / -1;
+}
+
 main > section:nth-child(2) > article {
-    display: inline-block;
-    width: 30%;
-    margin: 1%;
     padding: 30px;
     background-color: var(--cor-card);
     border: 1px solid var(--cor-borda);
     border-radius: 10px;
     text-align: left;
-    vertical-align: top;
 }
 
 article h3 {
