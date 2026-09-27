@@ -115,7 +115,7 @@ main > section:first-child a:hover {
 
 main > section:nth-child(2) {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
 }
@@ -238,4 +238,17 @@ footer {
 footer p {
     font-size: 14px;
     color: var(--cor-cinza);
+}
+
+
+/* =========================
+   TELAS MAIORES
+   ========================= */
+
+@media (min-width: 768px) {
+
+    main > section:nth-child(2) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
 }
