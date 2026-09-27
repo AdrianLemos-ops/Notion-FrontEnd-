@@ -136,19 +136,39 @@ article h3 {
     margin-bottom: 10px;
 }
 
+main > section:nth-child(2) > article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
 /* =========================
    FORMULÁRIO
    ========================= */
 
+main > section:nth-child(3) {
+    text-align: center;
+}
+
 form {
     max-width: 600px;
     margin: 0 auto;
+    padding: 30px;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    text-align: left;
 }
 
 form label {
     display: block;
-    margin-top: 20px;
+    margin-top: 18px;
     margin-bottom: 6px;
+    font-weight: bold;
+}
+
+form label:first-child {
+    margin-top: 0;
 }
 
 form input,
@@ -158,6 +178,14 @@ form textarea {
     border: 1px solid var(--cor-borda);
     border-radius: 6px;
     font-size: 16px;
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo);
+}
+
+form input:focus,
+form textarea:focus {
+    outline: 2px solid var(--cor-destaque);
+    border-color: var(--cor-destaque);
 }
 
 form textarea {
@@ -173,6 +201,7 @@ form button {
     background-color: var(--cor-texto);
     color: white;
     cursor: pointer;
+    font-size: 16px;
 }
 
 form button:hover {
@@ -186,8 +215,14 @@ form button:hover {
 main > section:nth-child(4) {
     text-align: center;
     background-color: var(--cor-card);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding: 60px 10%;
+    border-radius: 10px;
+    margin-bottom: 70px;
+}
+
+main > section:nth-child(4) p {
+    max-width: 700px;
+    margin: 0 auto 10px;
 }
 
 /* =========================
