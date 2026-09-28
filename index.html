@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Notion - Organize suas ideias</title>
 
     <link rel="stylesheet" href="style.css">
@@ -23,6 +25,7 @@
 
     <main>
 
+        <!-- Primeira seção -->
         <section>
             <h2>Organize suas ideias. Conquiste seus objetivos.</h2>
 
@@ -34,11 +37,13 @@
             <a href="#">Começar gratuitamente</a>
         </section>
 
+        <!-- Seção de recursos -->
         <section>
             <h2>Tudo o que você precisa em um só lugar</h2>
 
             <article>
                 <h3>Projetos</h3>
+
                 <p>
                     Organize seus projetos e acompanhe suas tarefas.
                 </p>
@@ -46,6 +51,7 @@
 
             <article>
                 <h3>Anotações</h3>
+
                 <p>
                     Registre suas ideias e mantenha suas informações organizadas.
                 </p>
@@ -53,29 +59,50 @@
 
             <article>
                 <h3>Tarefas</h3>
+
                 <p>
                     Crie listas e acompanhe tudo o que precisa fazer.
                 </p>
             </article>
         </section>
 
+        <!-- Formulário -->
         <section>
             <h2>Entre em contato</h2>
 
-            <form>
+            <form id="formulario-contato">
+
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    required
+                >
 
                 <label for="email">E-mail:</label>
-                <input type="email" id="email" name="email" required>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                >
 
                 <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    required
+                ></textarea>
 
                 <button type="submit">Enviar</button>
+
+                <p id="mensagem-formulario"></p>
+
             </form>
         </section>
 
+        <!-- Sobre o projeto -->
         <section>
             <h2>Sobre este projeto</h2>
 
@@ -92,8 +119,25 @@
     </main>
 
     <footer>
-        <p>&copy; 2026 Adrian Lemos - Projeto acadêmico de Front-End.</p>
+        <p>
+            &copy; 2026 Adrian Lemos - Projeto acadêmico de Front-End.
+        </p>
     </footer>
 
+    <!-- JavaScript do formulário -->
+    <script>
+        const formulario = document.getElementById("formulario-contato");
+        const mensagemFormulario = document.getElementById("mensagem-formulario");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            mensagemFormulario.textContent = "Mensagem enviada com sucesso!";
+
+            formulario.reset();
+        });
+    </script>
+
 </body>
+
 </html>
