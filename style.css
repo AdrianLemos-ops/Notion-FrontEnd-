@@ -17,6 +17,11 @@
     box-sizing: border-box;
 }
 
+/* Rolagem suave ao clicar nos links */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: var(--cor-fundo);
@@ -133,6 +138,9 @@ main > section:nth-child(2) > article {
     border: 1px solid var(--cor-borda);
     border-radius: 10px;
     text-align: left;
+
+    /* Transição do efeito dos cards */
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 article h3 {
@@ -142,7 +150,6 @@ article h3 {
 main > section:nth-child(2) > article:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    transition: 0.3s;
 }
 
 /* =========================
@@ -248,6 +255,26 @@ footer p {
    ========================= */
 
 @media (min-width: 768px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+        padding: 20px 6%;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        gap: 24px;
+    }
+
+    main > section:first-child {
+        padding: 100px 10%;
+    }
+
+    main > section:first-child h2 {
+        font-size: 48px;
+    }
 
     main > section:nth-child(2) {
         grid-template-columns: repeat(3, 1fr);
